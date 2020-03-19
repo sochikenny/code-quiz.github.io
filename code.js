@@ -55,6 +55,7 @@ $(document).ready(function () {
 
   //create an on click event for submit that will give score to user (basically a submit onclick and inside there will be the renderScore function)
   //creating a new function called renderScore (will show score)
+  //clicking answer choices will be involved and tallying the score
 
 
   
