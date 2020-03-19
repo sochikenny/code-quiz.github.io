@@ -1,30 +1,20 @@
-var clock = document.getElementById("Timer");
-var codequiz = document.getElementById("Quiz");
-var startquiz = document.getElementById("start");
-var submitquiz = document.getElementById("submit");
-var quizresult = document.getElementById("result");
-var pickA = document.getElementById("A");
-var pickB = document.getElementById("B");
-var pickC = document.getElementById("C");
-
-
 var quizquestions = [
     {
-      question: "Who was the richest person in the history of the world", 
+      question: "Who was the richest person in the history of the world?", 
        pickA: "JD Rockefellar",
        pickB: "Mansa Musa",
        pickC: "Jeff Bezos",
       correctAnswer: "b"
     },
     {
-      question: "Which country has the second largest black population in the world",
+      question: "Which country has the second largest black population in the world?",
         pickA: "Nigeria",
         pickB: "South Africa",
         pickC: "Brazil",
       correctAnswer: "c"
     },
     {
-      question: "What college did Michelle Obama attend for her undergrad",
+      question: "What college did Michelle Obama attend for her undergrad?",
         pickA: "Harvard",
         pickB: "Yale",
         pickC: "Princeton",
@@ -32,52 +22,101 @@ var quizquestions = [
     }
   ];
 
-for (var i = 0; i < quizquestions.length; i++){
-function deliverquestion(){
-    var ques = quizquestions;
-    question.innerHTML = "<p>" + ques.question + "</p>";
-    pickA.innerHTML = ques.pickA;
-    pickB.innerHTML = ques.pickB;
-    pickC.innerHTML = ques.pickC;
-    
-    deliverquestion();
-}
+$(document).ready(function () {
+  for (var i = 0; i < quizquestions.length; i++){
+    var questiondiv = $("<div>").text(quizquestions[i].question);
+    var questionpickA = $("<button>").text(quizquestions[i].pickA);
+    var questionpickB = $("<button>").text(quizquestions[i].pickB);
+    var questionpickC = $("<button>").text(quizquestions[i].pickC);
+    $(".container").append(questiondiv, questionpickA, questionpickB, questionpickC);
 
-var secondsleft = 60;
-var count = 0;
+  }
 
-function setTime() {
-  var timerinterval = setInterval(function(){
-    secondsleft--;
-    if (secondsleft === 0){
-    clearInterval(timerinterval);
-    result();
-    }
-    else {
-      deliverquestion();
-    }
-  }, 60000);
-}
-
-var score = 0;
-function checkAnswer(answer){
-    if (quizquestions[i].correct === answer){
-        score++;
-    }
-}
-
-function result(){
+  $(".start").on(function() {
   
-}
+      function setTime(){
+        var timeEl = $(".timer");
+        var secondsleft = 30;
+        var timerinterval = setInterval(function(){
+        secondsleft--;
+        timeEl.text(secondsleft + " seconds left ");
+        if (secondsleft === 0){
+          clearInterval(timerinterval);
+        }
+      }, 1000);
+  
+    }
+
+    setTime();
+
+  });
+
+  
 
 
 
-var Timer;
 
-startquiz.addEventListener("click", function (){
-setTime();
-Timer = setinterval(setTime, 1000);
-deliverquestion();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
-}
+   
+
+
+
+
+
+
+
+
+//for (var i = 0; i < quizquestions.length; i++){
+//function deliverquestion(){
+    //var ques = quizquestions[i];
+    //codequiz.innerHTML = "<p>" + ques.question + "</p>";
+    //pickA.innerHTML = "<li>" + ques.pickA + "</li>";
+    //pickB.innerHTML = "<li>" + ques.pickB + "</li>";
+    //pickC.innerHTML = "<li>" + ques.pickC + "</li>"; 
+    
+    //deliverquestion();
+//}
+
+//var secondsleft = 60;
+//var count = 0;
+
+
+
+
+//var score = 0;
+//function checkAnswer(answer){
+    //if (quizquestions[i].correct === answer){
+       // score++;
+    //}
+//}
+
+//function result(){
+  
+//}
+
+
+
+//var Timer;
+
+//startquiz.addEventListener("click", function (){
+//setTime();
+//Timer = setinterval(setTime, 1000);
+//deliverquestion();
+//});
+
+//}

@@ -2,12 +2,12 @@ h1 {
     text-align: center;
 }
 
-#submit{
+.submit{
     background-color: red;
     font-size: 25px;
 }
 
-#start{
+.start{
     background-color: green;
     font-size: 25px;
 }
@@ -16,4 +16,18 @@ p {
 }
 body {
     background-color: rgb(207, 196, 196);
+}
+.container{
+    text-align: center;
+    color: black;
+    font-size: x-large;
+    font-style: italic;
+}
+.jumbotron {
+    text-align: center;
+    color: black;
+    border-bottom: 5px solid black;
+  }
+#timer{
+    font-size: larger;
 }
