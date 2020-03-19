@@ -22,6 +22,7 @@ var quizquestions = [
     }
   ];
 
+  //placing questions on page
 $(document).ready(function () {
   for (var i = 0; i < quizquestions.length; i++){
     var questiondiv = $("<div>").text(quizquestions[i].question);
@@ -32,6 +33,7 @@ $(document).ready(function () {
 
   }
 
+//On click event: when you click start, the timer starts running
   $(".start").on("click", function() {
   
       function setTime(){
@@ -48,8 +50,12 @@ $(document).ready(function () {
     }
 
     setTime();
-
+    //need to put renderScore function here
   });
+
+  //create an on click event for submit that will give score to user (basically a submit onclick and inside there will be the renderScore function)
+  //creating a new function called renderScore (will show score)
+
 
   
 
@@ -79,25 +85,6 @@ $(document).ready(function () {
 
 
 
-
-
-//for (var i = 0; i < quizquestions.length; i++){
-//function deliverquestion(){
-    //var ques = quizquestions[i];
-    //codequiz.innerHTML = "<p>" + ques.question + "</p>";
-    //pickA.innerHTML = "<li>" + ques.pickA + "</li>";
-    //pickB.innerHTML = "<li>" + ques.pickB + "</li>";
-    //pickC.innerHTML = "<li>" + ques.pickC + "</li>"; 
-    
-    //deliverquestion();
-//}
-
-//var secondsleft = 60;
-//var count = 0;
-
-
-
-
 //var score = 0;
 //function checkAnswer(answer){
     //if (quizquestions[i].correct === answer){
@@ -111,12 +98,3 @@ $(document).ready(function () {
 
 
 
-//var Timer;
-
-//startquiz.addEventListener("click", function (){
-//setTime();
-//Timer = setinterval(setTime, 1000);
-//deliverquestion();
-//});
-
-//}
