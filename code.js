@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   }
 
-  $(".start").on(function() {
+  $(".start").on("click", function() {
   
       function setTime(){
         var timeEl = $(".timer");
