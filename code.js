@@ -1,24 +1,32 @@
 var quizquestions = [
     {
-      question: "Who was the richest person in the history of the world?", 
-       pickA: "JD Rockefellar",
-       pickB: "Mansa Musa",
-       pickC: "Jeff Bezos",
-      correctAnswer: "b"
+      question: "Who was the richest person in the history of the world?",
+
+       picks: ["JD Rockefellar",
+                "Mansa Musa",
+                "Jeff Bezos"],
+
+      correctAnswer: "Mansa Musa"
     },
+    
     {
       question: "Which country has the second largest black population in the world?",
-        pickA: "Nigeria",
-        pickB: "South Africa",
-        pickC: "Brazil",
-      correctAnswer: "c"
+
+        picks: ["Nigeria",
+                "South Africa",
+                "Brazil"],
+
+      correctAnswer: "Brazil"
     },
+
     {
       question: "What college did Michelle Obama attend for her undergrad?",
-        pickA: "Harvard",
-        pickB: "Yale",
-        pickC: "Princeton",
-      correctAnswer: "c"
+
+        picks: ["Harvard",
+                 "Yale",
+                 "Princeton"],
+
+      correctAnswer: "Princeton"
     }
   ];
 
@@ -26,9 +34,9 @@ var quizquestions = [
 $(document).ready(function () {
   for (var i = 0; i < quizquestions.length; i++){
     var questiondiv = $("<div>").text(quizquestions[i].question);
-    var questionpickA = $("<button>").text(quizquestions[i].pickA);
-    var questionpickB = $("<button>").text(quizquestions[i].pickB);
-    var questionpickC = $("<button>").text(quizquestions[i].pickC);
+    var questionpickA = $("<button>").text(quizquestions[i].picks[0]);
+    var questionpickB = $("<button>").text(quizquestions[i].picks[1]);
+    var questionpickC = $("<button>").text(quizquestions[i].picks[2]);
     $(".container").append(questiondiv, questionpickA, questionpickB, questionpickC);
 
   }
@@ -52,7 +60,20 @@ $(document).ready(function () {
     setTime();
     //need to put renderScore function here
   });
-
+ 
+ $(".submit").on("click", function(){
+ 
+  for (var i = 0; i < quizquestions.length; i++){
+    $("button").on("click", function(){
+      var count = 0;
+      var userResponse
+    });
+  function renderScore(){
+    //var count = 0;
+    //var userResponse 
+  }
+}
+ });
   //create an on click event for submit that will give score to user (basically a submit onclick and inside there will be the renderScore function)
   //creating a new function called renderScore (will show score)
   //clicking answer choices will be involved and tallying the score
