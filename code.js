@@ -39,6 +39,14 @@ $(document).ready(function () {
     var pickC = $("<button>").text(quizquestions[i].picks[2]);
     $(".container").append(questiondiv, pickA, pickB, pickC);
 
+    var count = 0;
+    var userResponse = quizquestions[i].picks[i];
+      if (userResponse === quizquestions[i].correctAnswer){
+        count++
+        alert(count); 
+      }
+    
+  
   }
 
 //On click event: when you click start, the timer starts running
@@ -56,24 +64,29 @@ $(document).ready(function () {
       }, 1000);
   
     }
-
     setTime();
+
+
     //need to put renderScore function here
   });
  
- $(".submit").on("click", function(){
+ //$(".submit").on("click", function(){
  
-  for (var i = 0; i < quizquestions.length; i++){
-    $("button").on("click", function(){
-      var count = 0;
-      var userResponse
-    });
-  function renderScore(){
+  //for (var i = 0; i < quizquestions.length; i++){
+    //$("button").on("click", function(){
+      //var count = 0;
+      //var userResponse
+    //});
+  //function renderScore(){
     //var count = 0;
-    //var userResponse 
-  }
-}
- });
+    //var userResponse = quizquestions[i].picks[i];
+    //if (userResponse === quizquestions[i].correctAnswer[i]){
+      //count++
+      //alert(count); 
+    //}
+  //}
+//}
+
   //create an on click event for submit that will give score to user (basically a submit onclick and inside there will be the renderScore function)
   //creating a new function called renderScore (will show score)
   //clicking answer choices will be involved and tallying the score
