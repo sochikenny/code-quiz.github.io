@@ -70,8 +70,11 @@ $(document).ready(function () {
     //need to put renderScore function here
   });
  
- //$(".submit").on("click", function(){
+ $(".submit").on("click", function(){
  
+  renderScore();
+
+ });
   //for (var i = 0; i < quizquestions.length; i++){
     //$("button").on("click", function(){
       //var count = 0;
@@ -92,27 +95,6 @@ $(document).ready(function () {
   //clicking answer choices will be involved and tallying the score
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
-
    
 
 
@@ -132,4 +114,4 @@ $(document).ready(function () {
 //}
 
 
-
+});
