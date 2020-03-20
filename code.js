@@ -34,10 +34,10 @@ var quizquestions = [
 $(document).ready(function () {
   for (var i = 0; i < quizquestions.length; i++){
     var questiondiv = $("<div>").text(quizquestions[i].question);
-    var questionpickA = $("<button>").text(quizquestions[i].picks[0]);
-    var questionpickB = $("<button>").text(quizquestions[i].picks[1]);
-    var questionpickC = $("<button>").text(quizquestions[i].picks[2]);
-    $(".container").append(questiondiv, questionpickA, questionpickB, questionpickC);
+    var pickA = $("<button>").text(quizquestions[i].picks[0]);
+    var pickB = $("<button>").text(quizquestions[i].picks[1]);
+    var pickC = $("<button>").text(quizquestions[i].picks[2]);
+    $(".container").append(questiondiv, pickA, pickB, pickC);
 
   }
 
