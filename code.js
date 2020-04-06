@@ -43,7 +43,7 @@ $(document).ready(function () {
     var userResponse = quizquestions[i].picks[i];
       if (userResponse === quizquestions[i].correctAnswer){
         count++
-        alert(count); 
+         
       }
     
   
