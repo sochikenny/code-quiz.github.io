@@ -1,4 +1,3 @@
-This is a simple code quiz.
-When you click the start button, the timer starts
-As you slect your answers, the scores are tallied 
-When you click submit, the quiz reveals your score
+This is a simple code quiz using vanilla Javascript.
+Begin answering questions whenever you are ready. 
+Once you click submit, your score is tallied and rendered onto the page
